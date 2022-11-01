@@ -1,2 +1,4 @@
-# advent-of-code-2022
-🦀 🎅 🎄 Ho, Ho, Ho,! Rusty Advent little Ferris! 🎄 🎅🦀  
+# Advent of Code 2022
+
+https://adventofcode.com/
+The first puzzles will unlock on December 1st at midnight EST (UTC-5).
