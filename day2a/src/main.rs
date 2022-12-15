@@ -7,7 +7,7 @@ fn main() {
                 (l.as_bytes()[2] - b'X') as i16,
             )
         })
-        .map(|(a, b)| 1 + b + 3 * ((1 + b - a).rem_euclid(3)))
+        .map(|(a, b)| 1 + b * 3 + (2 + a + b) % 3)
         .sum::<i16>();
 
     println!("score {:?}", solution);
