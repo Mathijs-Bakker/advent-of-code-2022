@@ -9,6 +9,8 @@
 // move 1 from 1 to 2
 //----------
 
+use std::collections::hash_map::DefaultHasher;
+
 // example-input.txt has 3 stacks of crates:
 const N_STACKS: usize = 3;
 
@@ -18,7 +20,7 @@ fn main() {
 
     // Split data into two
     // let (crates, moves) = data.split_at("\n\n");
-    let (crates, _moves) = data.split_at(49);
+    let (crates, moves) = data.split_at(49);
 
     let solution = crates.lines().collect::<Vec<&str>>();
 
@@ -41,11 +43,25 @@ fn main() {
                 stacks[i].pop();
             }
         }
-        // Reverse stacks for easy movement:
+        // Reverse crates for easy movement:
         stacks[i].reverse();
     }
 
     for l in stacks {
         println!("Stack {:?}", l);
     }
+
+    // let directions = moves.lines().collect::<Vec<&str>>();
+
+    // let directions: Vec<(u8, u8, u8)> = Default::default();
+    // let mut directions: Vec<&str> = Default::default();
+    let mut directions: Vec<&str>; // = Default::default();
+
+    for l in moves.lines().collect::<Vec<&str>>() {
+        // println!("dir line {:?}", l);
+        directions = l.split_whitespace().collect::<Vec<&str>>();
+        // println!("foo {:?}", directions);
+    }
+
+    // MOVEMENTS:::
 }
