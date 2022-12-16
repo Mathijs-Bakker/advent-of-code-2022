@@ -41,11 +41,11 @@ fn main() {
                 stacks[i].pop();
             }
         }
+        // Reverse stacks for easy movement:
+        stacks[i].reverse();
     }
 
-    // println!("data: {:?}", data);
-    // println!("Crates: {:?}\n\nMoves: {:?}", crates, moves);
     for l in stacks {
-        println!("Line {:?}", l);
+        println!("Stack {:?}", l);
     }
 }
