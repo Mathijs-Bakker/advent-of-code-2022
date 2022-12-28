@@ -35,7 +35,7 @@ fn main() {
         stacks[i].reverse();
     });
 
-    // Get the crane movement directions:
+    // Handle the crane movement directions:
     let mut directions: Vec<Vec<&str>> = Vec::default();
 
     for l in moves.lines().collect::<Vec<&str>>() {
@@ -48,7 +48,7 @@ fn main() {
         let origin: usize = d[3].parse::<usize>().unwrap() - 1;
         let destination: usize = d[5].parse::<usize>().unwrap() - 1;
 
-        (0..n_crates).for_each(|i| {
+        (0..n_crates).for_each(|_| {
             let tmp = stacks.clone();
             let v = tmp[origin].last().unwrap();
             stacks[origin].pop();
@@ -60,5 +60,6 @@ fn main() {
     for s in &stacks {
         solution.push(*s.last().unwrap_or(&' '));
     }
-    println!("Solution: {:?}", solution);
+
+    println!("Solution: {solution:?}");
 }
