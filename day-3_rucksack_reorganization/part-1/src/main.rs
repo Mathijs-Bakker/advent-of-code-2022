@@ -1,6 +1,6 @@
 fn main() {
     // Read data as bytes
-    let solution: i16 = include_bytes!("../input.txt")
+    let solution: i16 = include_bytes!("../../input.txt")
         // Create lines by splitting the data by the 'newline' byte escape:
         .split(|b| *b == b'\n')
         // Split lines in half (the two rugsack compartments) => ([u8, u8, ... ],[u8, u8, ... ]):

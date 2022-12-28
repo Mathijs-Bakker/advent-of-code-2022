@@ -1,6 +1,6 @@
 fn main() {
     // Read data as bytes
-    let solution: _ = include_bytes!("../input.txt")
+    let solution: _ = include_bytes!("../../input.txt")
         // Create lines by splitting the data by the 'newline' byte escape:
         .split(|b| *b == b'\n')
         // Store them in a vector:
